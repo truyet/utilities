@@ -1,0 +1,8 @@
+Centos 7 AWS:
+Method 1: By Creating File in Current File System
+
+This option is helpful if we don’t want to add extra disks in our systems, In this we simply create a file in our current file system and make it type swap, which can be used as swap in our system. Use following commands to create and enable swap on our system.
+
+# dd if=/dev/zero of=/var/myswap bs=1M count=2048
+# mkswap /var/myswap
+# swapon /var/myswap
